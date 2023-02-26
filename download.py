@@ -19,6 +19,6 @@ with open('./download_list.csv', 'r', encoding='utf-8') as f:
         ydl_opts = {
             'format': 'mp4/b',
             'paths': {'home': save_path},
-            'outtmpl': title}
+            'outtmpl': title + 'mp4'}
         ydl = yt_dlp.YoutubeDL(ydl_opts)
         ydl.download([url])
